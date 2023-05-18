@@ -1,0 +1,33 @@
+{{> navbar }}
+
+<div class="w-full">
+  <div class="w-full flex items-center justify-center">
+    <h2 class="text-white text-xl font-extrabold uppercase border-cyan-300 border-b-8">product cart</h2>
+  </div>
+</div>
+
+<div class="w-full my-2 rounded-md shadow-sm">
+  <div class="overflow-x-auto">
+    <table class="w-full text-sm text-left">
+      <thead class="bg-neutral-800 text-xs uppercase whitespace-nowrap">
+        <tr>
+          <th class="py-3 px-6">title</th>
+          <th class="py-3 px-6">code</th>
+          <th class="py-3 px-6">price</th>
+          <th class="py-3 px-6">category</th>
+          <th class="py-3 px-6">Quantity</th>
+        </tr>
+      </thead>
+      <tbody id="list-products-container">
+        {{!-- 
+          List Products
+        --}}
+      </tbody>
+    </table>
+    <div class="w-full mt-5 items-center justify-center hidden" id="payment-button">
+      <button class="button-add-to-cart bg-emerald-500 py-2 px-4 font-bold rounded-md">Finalizar compra</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/cart/detail.js"></script>

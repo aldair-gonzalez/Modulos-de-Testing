@@ -1,0 +1,28 @@
+paths:
+  /api/carts/{cid}/product/{pid}:
+    delete:
+      summary: Elimina un producto del carrito
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          description: ID del producto a eliminar
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Producto eliminado exitosamente
+        '401':
+          description: El usuario no está autenticado o no tiene permisos suficientes'
+        "404":
+          description: No se encontró el carrito o el producto especificado
+        '500':
+          description: Error interno del servidor

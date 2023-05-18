@@ -1,0 +1,50 @@
+{{> navbar }}
+
+<div class="w-full flex flex-col items-center justify-center">
+
+    <div class="bg-card w-full md:w-1/3 p-8 flex flex-col gap-4">
+        <form class="flex flex-col items-center justify-center gap-4" id="form-update-product" autocomplete="off">
+            <h2 class="text-2xl font-extrabold uppercase">Actualizar producto</h2>
+
+            <div class="w-full flex flex-col items-center justify-center gap-6">
+                <div class="w-full grid grid-cols-1 gap-2">
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="title">Product</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="text" name="title" placeholder="Product" required>
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="description">Description</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="text" name="description" placeholder="Description">
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="code">Code</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="text" name="code" placeholder="Code">
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="price">Price</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="number" name="price">
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                      <span class="text-neutral-400">Status</span>
+                      <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" name="status">
+                        <div class="w-11 h-6 bg-neutral-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-neutral-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-neutral-900"></div>
+                      </label>
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="stock">Stock</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="number" name="stock">
+                    </div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <label class="text-neutral-400" for="category">Category</label>
+                        <input class="w-full p-2 outline-none focus:bg-neutral-600" type="text" name="category" placeholder="Category">
+                    </div>
+                </div>
+                <button class="bg-black py-2 px-8" type="submit">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script type="module" src="/js/product/update.js"></script>

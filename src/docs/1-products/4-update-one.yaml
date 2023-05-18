@@ -1,0 +1,32 @@
+paths:
+  /api/products/{pid}:
+    put:
+      summary: Actualizar un producto existente
+      description: Actualiza los detalles de un producto existente en la base de datos
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          description: ID del producto a actualizar
+          required: true
+          schema:
+            type: string
+        - name: product
+          in: body
+          description: Estructura del producto a actualizar
+          required: true
+          schema:
+            type: object
+            $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: El producto fue actualizado satisfactoriamente
+        '400':
+          description: Los datos proporcionados no son válidos
+        '401':
+          description: El usuario no está autenticado o no tiene permisos suficientes
+        '404':
+          description: El producto no existe
+        '500':
+          description: Error interno del servidor

@@ -1,0 +1,26 @@
+paths:
+  /api/products:
+    post:
+      summary: Crear un nuevo producto
+      description: Crear un nuevo producto en la base de datos
+      tags:
+        - Products
+      parameters:
+        - name: product
+          in: body
+          description: Estructura del producto a crear
+          required: true
+          schema:
+            type: object
+            $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: El producto fue creado satisfactoriamente
+        '400':
+          description: Los datos proporcionados no son válidos
+        '401':
+          description: El usuario no está autenticado o no tiene permisos suficientes
+        '422':
+          description: El producto ya existe
+        '500':
+          description: Error interno del servidor

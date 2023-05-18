@@ -1,0 +1,31 @@
+{{> navbar }}
+
+<div class="w-full">
+    <div class="w-full flex items-center justify-center">
+        <h2 class="text-white text-xl font-extrabold uppercase border-cyan-300 border-b-8">Tickets</h2>
+    </div>
+</div>
+
+
+<div class="w-full my-2 rounded-md shadow-sm">
+    <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left">
+            <thead class="bg-neutral-800 text-xs uppercase whitespace-nowrap">
+                <tr>
+                    <th class="py-3 px-6">purcharser</th>
+                    <th class="py-3 px-6">code</th>
+                    <th class="py-3 px-6">ammount</th>
+                    <th class="py-3 px-6">purchase date time</th>
+                </tr>
+            </thead>
+            <tbody id="tickets-container">
+                {{!-- Lista de tickets --}}
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4 flex items-center justify-center gap-2" id="index-pages">
+      {{!-- Paginacion --}}
+    </div>
+</div>
+
+<script type="module" src="/js/ticket/table.js"></script>

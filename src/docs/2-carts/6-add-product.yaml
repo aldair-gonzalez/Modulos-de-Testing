@@ -1,0 +1,38 @@
+paths:
+  /api/carts/{cid}/product/{pid}:
+    post:
+      summary: Agrega un producto al carrito
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito de compras
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          description: ID del producto que se desea agregar al carrito
+          required: true
+          schema:
+            type: string
+        - name: user
+          in: body
+          description: Datos del propietario del carrito (usuario, premium)
+          required: true
+          schema:
+            type: object
+            $ref: '#/components/schemas/UserCart'
+
+      responses:
+        '200':
+          description: Producto agregado al carrito exitosamente
+        '400':
+          description: Error de validación en los datos enviados
+        '401':
+          description: El usuario no está autenticado o no tiene permisos suficientes'
+        '404':
+          description: Carrito de compras o producto no encontrado
+        '500':
+          description: Error interno del servidor

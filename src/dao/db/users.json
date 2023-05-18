@@ -1,0 +1,24 @@
+[
+	{
+		"fullname": "Usuario ",
+		"first_name": "Usuario",
+		"last_name": "",
+		"email": "user@gmail.com",
+		"age": "18",
+		"password": "$2b$10$o0MNmnXkchxSdtxPOAC80OxTy6j2cEsUt04XaRBWJNJIW3ZKOgAk2",
+		"cart": 1,
+		"role": "usuario",
+		"_id": 1
+	},
+	{
+		"fullname": "Admin ",
+		"first_name": "Admin",
+		"last_name": "",
+		"email": "admin@gmail.com",
+		"age": "18",
+		"password": "$2b$10$F1h2bVwEA.Hb6lojH.RfVOSIyeONUSwKFogE163XxpR2CBn1NkyH.",
+		"cart": 2,
+		"role": "admin",
+		"_id": 2
+	}
+]

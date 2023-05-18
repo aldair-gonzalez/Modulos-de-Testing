@@ -1,0 +1,17 @@
+components:
+  schemas:
+    UserCart:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: ID autogenerado por Mongoose
+        role:
+          type: string
+          description: Rol del usuario en la página (usuario, premium)
+      required:
+        - _id
+        - role
+      example:
+        _id: id
+        role: usuario

@@ -1,0 +1,14 @@
+paths:
+  /api/carts:
+    post:
+      summary: Crear un nuevo carrito
+      description: Crear un nuevo carrito en la base de datos
+      tags:
+        - Carts
+      responses:
+        '201':
+          description: El carrito fue creado satisfactoriamente
+        '401':
+          description: El usuario no está autenticado o no tiene permisos suficientes
+        '500':
+          description: Hubo un error en la conexión a la base de datos

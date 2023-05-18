@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+input {
+    @apply bg-neutral-700;
+}
+
+body {
+    @apply bg-black bg-opacity-90 text-neutral-300 text-sm;
+    
+}
+
+::-webkit-scrollbar{
+    @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-neutral-700;
+}
+
+.fila {
+    @apply text-neutral-400 transition ease-linear duration-100;
+}
+.fila:nth-child(even) {
+    @apply even:bg-neutral-700 even:bg-opacity-20;
+}
+.fila, .fila:nth-child(even):hover {
+    @apply outline-2 -outline-offset-2 outline-neutral-500 hover:bg-neutral-800 hover:text-white hover:outline;
+}
+
+.bg-card {
+    @apply bg-neutral-800;
+}

@@ -1,0 +1,56 @@
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: ID autogenerado por Mongoose
+        title:
+          type: string
+          description: Título del producto
+        description:
+          type: string
+          description: Descripción del producto
+        code:
+          type: string
+          description: Código del producto
+        price:
+          type: number
+          description: Precio del producto
+        status:
+          type: boolean
+          description: Estado del producto
+        stock:
+          type: number
+          description: Cantidad en stock del producto
+        category:
+          type: string
+          description: Categoría del producto
+        thumbnails:
+          type: array
+          items:
+            type: string
+            format: url
+          description: URLs de las imágenes del producto
+        owner:
+          type: string
+          description: ID del usuario que creó el producto
+      required:
+        - title
+        - code
+        - price
+        - stock
+        - category
+      example:
+        title: "Nombre del producto"
+        description: "Descripcion del producto"
+        code: "codigo-sin-espacios-del-producto"
+        price: 0
+        status: true
+        stock: 1
+        category: "categoria del producto"
+        thumbnails:
+          - "url1"
+          - "url2"
+        owner: "id del propietario del producto, por defecto es admin"
